@@ -1,0 +1,47 @@
+package com.setupPackage;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class Setup1 {
+	WebDriver driver;
+
+	public Setup1(WebDriver driver)
+	{
+
+		this.driver = driver;
+	}
+
+	public void waitforElement(By findBy)
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(findBy));
+	}
+	
+
+	public void waitforElementDisappear(WebElement ele)
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));
+		wait.until(ExpectedConditions.invisibilityOf(ele));
+	}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
