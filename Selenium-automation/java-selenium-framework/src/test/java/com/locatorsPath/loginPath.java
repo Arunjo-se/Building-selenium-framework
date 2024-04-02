@@ -47,6 +47,7 @@ public class loginPath extends Setup1 {
 		Setup1 setup = new Setup1(driver);
 		
 		setup.waitforElement(username);
+		
 		driver.findElement(username).sendKeys(enterUsername);
 
 		
